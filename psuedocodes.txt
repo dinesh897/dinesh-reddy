@@ -1,0 +1,61 @@
+ main{}
+ { 
+     int x;
+     printf("Enter a number");
+     scanf("%d",&x);
+     if(x%5==0)
+         printf("%d is divisible by 5",x);
+      else
+          printf("%d is not divisible by 5",x);
+  }
+
+
+for calculating interest
+
+Begin
+        INITIALIZE Principalamount= 1000 , Rate= 10, Time=1
+        SimpleInterest = (Principalamount*Rate*Time)/100
+        DISPLAY "Simple Interest is : "SimpleInterest
+END
+
+senior citizen
+Begin
+    prompt "Enter a number" and store in num
+    if(num<18) then
+       display "you are not eligible for voting"
+    elseif(num>60)then
+      display "you are a senior citizen"
+    else(num >=18 && num<=60)
+      display "you are eligible for voting"
+    ENDIF
+end
+
+Begin
+   Declare num as integer
+   initialize num as 1
+   while(num<=5)
+   display "num"
+   num=num+1
+   End while
+END
+
+
+BEGIN
+    for num=1 to 10
+      if(num%2=0)
+         DISPLAY "even"
+      else
+         DISPLAY "odd"
+      ENDIF
+
+BEGIN
+     Declare numbers[4] AS INTEGER ARRAY
+     For index=0 to 4
+         Accept numbers[index]
+     END FOR
+     For index=0 to 4
+             IF((numbers[index]%1==0)&&(numbers[index]%numbers[index]==0))THEN
+                    DISPLAY numbers[index] "is a prime number"
+             END IF
+     END FOR
+END

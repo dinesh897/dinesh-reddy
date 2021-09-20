@@ -1,0 +1,40 @@
+
+    
+
+<html>
+ 
+<head></head>
+ 
+<body>
+<form>
+<input type="text"id="txtNumber1"placeholder="Please enter some value"/>
+<input type="text"id="txtNumber2"placeholder="Please enter some value"/>
+    =
+<input type="text"id="txtTotal"value="0"/>
+<br><br>
+<input type="button"value="+"onclick="Sum()"/>
+<input type="reset"/>
+<br><br><br><br>
+<label id="lblMessage"></label>
+</form>
+</body>
+ 
+</html>
+<script>
+//console.log(document.getElementById('txtNumber').value);
+// Sum();
+ 
+function Sum()
+    {​​​​​​​​
+var Number1=Number(document.getElementById('txtNumber1').value);
+var Number2=Number(document.getElementById('txtNumber2').value);
+
+document.getElementById('txtTotal').value=Number1+Number2;
+
+    }​​​​​​​​
+// function Sum() {​​​​​​​​
+//     var Number1 = 6,
+//         Number2 = 7;
+//     console.log(Number1 + Number2);
+// }​​​​​​​​
+</script>

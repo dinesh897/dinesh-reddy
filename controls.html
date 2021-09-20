@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+
+
+
+<body>
+
+<form>
+
+Maths<input name="subjects" value="Maths" type="checkbox" />
+Science<input name="subjects" value="Science" type="checkbox" /> 
+English<input name="subjects" value="English" type="checkbox" />
+<input type="button" value="Check" onclick="GetValues()">
+
+</form>
+</body>
+
+</html>
+<script>
+
+function GetValues() {
+var controls =  document.getElementsByName('subjects');
+ for (var i = 0; i < controls.length; i++)
+
+{
+
+if (controls[i].checked) {
+
+console.log(controls [i].value+" is checked");
+
+}
+
+else {
+     console.log(controls[i].value);
+}
+}
+}
+</script>

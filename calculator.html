@@ -1,0 +1,54 @@
+
+<html>
+<head></head>
+<body>
+<form>
+<inputtype="text"id="txtNumber1"placeholder="Please enter some value"/>
+<inputtype="text"id="txtNumber2"placeholder="Please enter some value"/>
+            =
+<inputtype="text"id="txtTotal"value="0"/>
+<br><br>
+<inputtype="button"value="+"onclick="Sum()"/>
+<inputtype="button"value="-"onclick="Sub()"/>
+<inputtype="button"value="*"onclick="Mul()"/>
+<inputtype="button"value="/"onclick="Div()"/>
+<inputtype="reset"/>
+<br><br><br><br>
+<labelid="lblMessage"></label>
+</form>
+</body>
+</html>
+<script>
+//console.log(document.getElementById('txtNumber').value);
+// Sum();
+functionSum()
+    {​​​​​​​​
+varNumber1=Number(document.getElementById('txtNumber1').value);
+varNumber2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1+Number2;
+    }​​​​​​​​
+functionSub()
+    {​​​​​​​​
+varNumber1=Number(document.getElementById('txtNumber1').value);
+varNumber2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1-Number2;
+    }​​​​​​​​
+functionMul()
+    {​​​​​​​​
+varNumber1=Number(document.getElementById('txtNumber1').value);
+varNumber2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1*Number2;
+    }​​​​​​​​
+functionDiv()
+    {​​​​​​​​
+varNumber1=Number(document.getElementById('txtNumber1').value);
+varNumber2=Number(document.getElementById('txtNumber2').value);
+document.getElementById('txtTotal').value=Number1/Number2;
+    }​​​​​​​​
+// function Sum() {​​​​​​​​
+// var Number1 = 6,
+// Number2 = 7;
+// console.log(Number1 + Number2);
+// }​​​​​​​​
+</script>
+

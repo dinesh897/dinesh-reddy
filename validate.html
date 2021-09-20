@@ -1,0 +1,50 @@
+
+<html>
+ 
+<head>
+    <style>
+    #txtMobileNumber,
+    #txtName {​​​​​​​​
+       width: 18%;
+    }​​​​​​​​
+        .danger{​​​​​​​​
+            color: red;
+    }​​​​​​​​
+    </style>
+</head>
+ 
+<body>
+    <form>
+        <label>Name</label>
+        <br>
+        <input type="text" id="txtName" placeholder="Please enter your Name" required />
+        <label id="lblNameErrorMsg" class="danger"></label>
+        <br><br>
+        <label>Mobile Number</label>
+        <br>
+        <input type="number" id="txtMobileNumber" placeholder="Please enter your Mobile Number" required/>
+        <label id="lblNumberErrorMsg" class="danger"></label>
+        <br><br>
+        <input type="button" value="Register" onclick="Validate()" />
+        <input type="reset" />
+        <br> <br> <br> <br>
+        <label id="lblMessage"></label>
+    </form>
+</body>
+ 
+</html>
+<script>
+    function Validate() {​​​​​​​​
+        var txtName = document.getElementById('txtName').value;
+        var txtMobileNumber = Number(document.getElementById('txtMobileNumber').value);
+        if(txtName==""){​​​​​​​​
+            document.getElementById('lblNameErrorMsg').innerHTML="Please enter your Name";
+        }​​​​​​​​
+        if(txtMobileNumber==''){​​​​​​​​
+            document.getElementById('lblNumberErrorMsg').innerHTML="Please enter your Mobile Number";
+        }​​​​​​​​
+        
+        
+ 
+    }​​​​​​​​
+</script>

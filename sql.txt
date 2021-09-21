@@ -1,0 +1,88 @@
+create table sample(Id int,text varchar(200));
+
+insert into sample(Id,text) values(1,'Dinesh 1')
+insert into sample(Id,text) values(2,'Dinesh 2')
+insert into sample(Id,text) values(3,'Dinesh 3')
+insert into sample(Id,text) values(4,'Dinesh 4')
+
+select * from sample
+
+select * from employeesalary;
+select * from employeesalary where EMPsalary Between 1000 and 10000;
+select * from employeesalary where EmployeeName LIKE '%Emp%'
+select * from sample where TEXT LIKE 'sa%';
+select * from employeesalary where ID in (1,2,3);
+select * from employeesalary where ID Not in (1,2,3);
+
+select * from sample;
+select DISTINCT TEXT from sample;
+select * feom sample order by ID desc
+
+
+insert into Department(ID,Department) values(1,'IT');
+insert into Department(ID,Department) values(2,'HR');
+insert into Department(ID,Department) values(3,'Admin');
+insert into Department(ID,Department) values(4,'Support');
+insert into Department(ID,Department) values(5,'Security');
+insert into Department(ID,Department) values(6,'House Keeping');
+
+--cartisian join
+select employeename,department from employee,Department;
+
+--Equi join
+select EMPLOYEENAME,DEPARTMENTID from employee,employeeDepartmentMapping where employee.ID=employeeDepartmentMapping.EmployeeID
+
+--Non-equi join
+select EMPLOYEENAME,DEPARTMENTID from employee,employeeDepartmentMapping where employee.ID Between 1 AND 2;
+
+--outer join
+select EMPLOYEENAME,DEPARTMENTID from employee,employeeDepartmentMapping where employee.ID(+)=employeeDepartmentMapping.EmployeeID;
+
+
+select DEPARTMENT_ID,DEPARTMENT_NAME from  HR.DEPARTMENTS DEPT
+ where EXISTS (select DEPARTMENT_ID from  HR.EMPLOYEES EMP
+ where EMP.DEPARTMENT_ID=DEPT.DEPARTMENT_ID )
+
+insert into employeeDepartmentMapping(ID,EmployeeID,DepartmentID) values(1,1,3);
+insert into employeeDepartmentMapping(ID,EmployeeID,DepartmentID) values(2,2,1);
+insert into employeeDepartmentMapping(ID,EmployeeID,DepartmentID) values(3,3,4);
+insert into employeeDepartmentMapping(ID,EmployeeID,DepartmentID) values(4,4,6);
+insert into employeeDepartmentMapping(ID,EmployeeID,DepartmentID) values(5,6,5);
+
+
+    
+create table sample(ID int NOT NULL,Text Varchar2(200) NOT NULL,CreatedOn Date default sysdate);
+
+
+select * from sampletable
+insert into sample(ID,TEXT) values(1,'Dinesh');
+insert into sample(ID) values(2);
+
+
+create table sampletable(ID int NOT NULL,Text Varchar2(200),SampleValue Number(4,2),CreatedOn Date default sysdate,CONSTRAINT ID_UK UNIQUE(ID) );
+
+
+insert into sampletable(ID,TEXT) values(1,'Dinesh');
+
+
+create table sampletablex(ID int CONSTRAINT ID_PK PRIMARY KEY,Text Varchar2(200) );
+
+
+create table sampletablexy(ID int,Text Varchar2(200),SampleValue Number(4,2) CONSTRAINT SampleValue_MIN CHECK(SampleValue>100) );
+
+
+insert into sampletablexy(ID,SampleValue) values(1,100.00);
+
+
+alter table sampletablexy add(xvalue int);
+select * from sampletablexy;
+alter table sampletablexy Modify(SampleValue int);
+select * from sampletablexy
+alter table sampletablexy  drop COLUMN XVALUE;
+
+
+drop table sampletablexy
+RENAME sampletable to sampletablexy
+truncate table sampletablexy
+
+
